@@ -8,7 +8,7 @@ export const sessionOptions: IronSessionOptions = {
   cookieName: 'kanban-session',
   password: process.env.SESSION_SECRET,
   cookieOptions: {
-    secure: process.env.NODE_ENV === 'production',
+    secure: process.env.COOKIE_SECURE === "true",
     httpOnly: true,
     sameSite: 'strict' as const,
   },
